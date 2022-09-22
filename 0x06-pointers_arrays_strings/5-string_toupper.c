@@ -5,7 +5,7 @@
  * Return: pointer to the string in uppercase format
  */
 
-char _string_toupper(char *s)
+char *string_toupper(char *);
 {
 	char *p = s;
 
