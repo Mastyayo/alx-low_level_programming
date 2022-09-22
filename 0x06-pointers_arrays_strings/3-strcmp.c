@@ -5,23 +5,20 @@
  * @s1: first string for comparing
  * @s2: secong string to compare
  *
- * Return: Integer number
+ * Return: value less than 0 if string is less than the other.
+ * value greater than 0 if string is greater than the other.
+ * 0 if strings are equal.
  */
-
-
-int _strcom(char *s1, char *s2)
+int _strcmp(char *s1, char *s2)
 {
-	char *r = s1;
-	char *l = s2;
-	int res = 0;
+	int counter, cmpVal;
 
-	while (*r || *l)
+	counter = 0;
+	while (s1[counter] == s2[counter] && s1[counter] != '\0')
 	{
-		res = *r - *l;
-		if (res != 0)
-			return (res);
-		r++;
-		l++;
+		counter++;
 	}
-	return (res);
+
+	cmpVal = s1[counter] - s2[counter];
+	return (cmpVal);
 }
