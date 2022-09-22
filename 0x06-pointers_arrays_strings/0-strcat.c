@@ -7,20 +7,19 @@
  *
  * Return: Pointer to string concatinated
  */
-
-char *_strcat(char *dest,  char *src)
+char *_strcat(char *dest, char *src)
 {
-	char *p = dest;
+	int length, j;
 
-	while (*p != '\0')
-		p++;
-	while (1)
+	length = 0;
+	while (dest[length] != '\0')
 	{
-		*p = *src;
-		if(*src == '\0')
-			break;
-		p++;
-		src++;
+		length++;
 	}
+	for (j = 0; src[j] != '\0'; j++, length++)
+	{
+		dest[length] = src[j];
+	}
+	dest[length] = '\0';
 	return (dest);
 }
