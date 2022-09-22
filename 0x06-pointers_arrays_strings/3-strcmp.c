@@ -8,6 +8,7 @@
  * Return: Integer number
  */
 
+
 int _strcom(char *s1, char *s2)
 {
 	char *r = s1;
