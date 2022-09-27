@@ -1,20 +1,22 @@
 #include "main.h"
 
 /**
- * _memset - Fills meemory with constnt time location s to b
- * @s: source string
- * @b: constant byte
- * @n: len of buffer
- * Return: new string
+ * _memcpy - Copy n characters from memory area
+ * @dest: Pointer to the destination array
+ * @src: pointer to the source copied from
+ * @n: Number of bytes copied
+ *
+ * Return: Pointer to dest
  */
-char *_memset(char *s, char b, unsigned int n)
-{
-	unsigned int i = 0;
 
-	while (i < n)
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int count = 0;
+
+	while (count < n)
 	{
-		*(s + i) = b;
-		i++;
+		dest[count] = src[count];
+		count++;
 	}
-	return (s);
+	return (dest);
 }
