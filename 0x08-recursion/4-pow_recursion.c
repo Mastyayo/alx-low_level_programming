@@ -1,6 +1,7 @@
 #include "main.h"
 
-/**_pow_recursion - return the power of an integer
+/**
+ * _pow_recursion - return the power of an integer
  * @x: integer
  * @y: power
  *
