@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-/***
+/**
  * _calloc - initialize memory space with zero
  * @nmemb: string 1
  * @size: string 2, concatinate to 1
