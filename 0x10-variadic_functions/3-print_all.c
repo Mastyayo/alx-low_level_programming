@@ -35,7 +35,7 @@ void print_all(const char * const format, ...)
 			case 'f':
 				printf("%f", va_arg(ap, double));
 				space = 1;
-				space = 1;
+				break;
 			case 's':
 				string = va_arg(ap, char *);
 				if (string == NULL)
@@ -50,4 +50,4 @@ void print_all(const char * const format, ...)
 	}
 	va_end(ap);
 	printf("\n");
-}	
+}
