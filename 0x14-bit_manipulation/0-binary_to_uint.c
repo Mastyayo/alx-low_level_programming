@@ -1,38 +1,25 @@
 #include "main.h"
-#include "_pow_recursion.c"
 
 /**
- * binary_to_uint - converts a binary to an unsigned int
- * @b: binary number to convert
- * Return: converted number, or 0 if b isn't binary or NULL
+ * binary_to_uint - converts a binary number to unsigned int
+ * @b: string containing the binary number
+ *
+ * Return: the converted number
  */
-
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int decimal = 0, i = 0, j;
+	int i;
+	unsigned int dec_val = 0;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
 
-	/* go to end of array */
-	for (j = 0; b[j] != '\0'; j++)
+	for (i = 0; b[i]; i++)
 	{
-		/* check if binary */
-		if (((b[j]) != '0') && ((b[j]) != '1') && ((b[j]) != '\0'))
+		if (b[i] < '0' || b[i] > '1')
 			return (0);
+		dec_val = 2 * dec_val + (b[i] - '0');
 	}
-	/* move back from NULL byte */
-	j = j - 1;
-	while (b[i] != '\0')
-	{
-		if (b[j - i] == '1')
-		{
-			if (i == 0)
-				decimal = decimal + 1;
-			else
-				decimal = decimal + _pow_recursion(2, i);
-		}
-		i++;
-	}
-	return (decimal);
+
+	return (dec_val);
 }
